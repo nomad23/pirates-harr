@@ -69,6 +69,29 @@ return array(
             )->apply("JsMin");
         },
 
+        'nvd3' => function ($collection) {
+
+            $collection->directory(
+                'js/nvd3',
+                function ($collection) {
+                    $collection->add('html5shim.js');
+
+
+                     $collection->add("lib/d3.v3.js");
+ $collection->add("nv.d3.js");
+ $collection->add("src/tooltip.js");
+ $collection->add("src/utils.js");
+ $collection->add("src/models/axis.js");
+ $collection->add("src/models/discreteBar.js");
+ $collection->add("src/models/discreteBarChart.js");
+                    $collection->add("src/models/legend.js");
+                    $collection->add("src/models/pie.js");
+                    $collection->add("src/models/pieChart.js");
+$collection->add("src/nv.d3.css");
+                }
+
+            )->apply("JsMin");
+        },
         'appstrap' => function ($collection) {
 
             $collection->directory(
@@ -89,11 +112,12 @@ return array(
                 function ($collection) {
                     $collection->add('jquery.js');
                     $collection->add('bootstrap.js');
-                    $collection->add('/angularjs/angular.min.js');
-                    $collection->add('/angularjs/angular-resource.min.js');
+                //    $collection->add('/angularjs/angular.min.js');
+                 //   $collection->add('/angularjs/angular-resource.min.js');
                     $collection->add('jquery.quicksand.js');
                     $collection->add('jquery.flexslider-min.js');
                     $collection->add('script.js');
+                 //   $collection->add('nv.d3.js');
                 }
             )->apply('JsMin');
 

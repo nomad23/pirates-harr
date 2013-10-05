@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('pages.homemain');
-});
+//Route::get('/', function()
+//{
+//	return View::make('pages.homemain');
+//});
+
+Route::get('/', array('uses' => 'HomeController@getRandomData'));
