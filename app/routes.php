@@ -17,3 +17,5 @@
 //});
 
 Route::get('/', array('uses' => 'HomeController@getRandomData'));
+Route::get('/analyze', array('uses' => 'HomeController@getAnalyze'));
+Route::post('/analysis', array('uses' => 'HomeController@postAnalyze'));

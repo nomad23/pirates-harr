@@ -19,6 +19,31 @@ class HomeController extends BaseController {
 	{
 		return View::make('hello');
 	}
+    public function postAnalyze(){
+        $input = Input::get("choice");
+        //dd($input);
+        $myarray = array_unique($input);
+
+        foreach($myarray as $key => $value){
+            if($value==0){
+                unset($myarray[$key]);
+            }
+        }
+        //dd($myarray);
+
+        // Fetching data for each entry:
+        $popData = new popModel();
+        $mypopData2  = $popData::whereIn("id",$myarray)->get();
+       // dd($mypopData2);
+        //Sending data to page:
+        return \View::make("pages.results")->with("countyData",$mypopData2);
+
+    }
+    public function getAnalyze(){
+        $popData = new popModel();
+        $mypopData2  = $popData::all();
+        return \View::make("pages.analyzer")->with("countyData",$mypopData2);
+    }
 
     public function getRandomData(){
         //Get three random groups and pass data to homepage:

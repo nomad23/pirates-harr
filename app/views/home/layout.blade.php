@@ -65,37 +65,11 @@
 
                     <!--main navigation-->
                     <ul class="nav" id="main-menu">
-                        <li class="home-link"><a href="index.htm"><i class="icon-home hidden-phone"></i><span class="visible-phone">Home</span></a></li>
-                        <li class="dropdown"><a href="features.htm" class="dropdown-toggle menu-item" id="features-drop" data-toggle="dropdown">Features +</a>
-                            <!-- Dropdown Menu -->
-                            <ul class="dropdown-menu mega-menu" role="menu" aria-labelledby="features-drop">
-                                <li class="mega-menu-wrapper" role="menuitem"> <span class="menu-title">Mega Menu with links & text items</span>
-                                    <ul class="row-fluid" role="menu">
-                                        <li class="span4" role="menuitem"> <a href="features.htm"><img src="img/features/feature-1.png" alt="Feature 1" /></a> <a href="features.htm" tabindex="-1" class="menu-item">Mobile Friendly</a> <span>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio!</span> </li>
-                                        <li class="span4" role="menuitem"> <a href="features.htm"><img src="img/features/feature-2.png" alt="Feature 2" /></a> <a href="features.htm" tabindex="-1" class="menu-item">24/7 Support</a> <span>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio!</span> </li>
-                                        <li class="span4" role="menuitem"> <a href="features.htm"><img src="img/features/feature-4.png" alt="Feature 4" /></a> <a href="features.htm" tabindex="-1" class="menu-item">99% Uptime</a> <span>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio!</span> </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="pricing.htm" class="menu-item">Pricing</a></li>
-                        <li><a href="customers.htm" class="menu-item">Customers</a></li>
-                        <li class="dropdown"> <a href="about.htm" class="dropdown-toggle" id="about-drop" data-toggle="dropdown">About +</a>
-                            <!-- Dropdown Menu -->
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="about-drop">
-                                <li role="menuitem"><a href="about.htm" tabindex="-1" class="menu-item">About Us</a></li>
-                                <li role="menuitem"><a href="team.htm" tabindex="-1" class="menu-item">Our Team</a></li>
-                                <li role="menuitem"><a href="contact.htm" tabindex="-1" class="menu-item">Contact</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"> <a href="blog.htm" class="dropdown-toggle" id="blog-drop" data-toggle="dropdown">Blog +</a>
-                            <!-- Dropdown Menu -->
-                            <ul class="dropdown-menu pull-left" role="menu" aria-labelledby="blog-drop">
-                                <li role="menuitem"><a href="blog.htm" tabindex="-1" class="menu-item">Right Sidebar</a></li>
-                                <li role="menuitem"><a href="blog-leftbar.htm" tabindex="-1" class="menu-item">Left Sidebar</a></li>
-                                <li role="menuitem"><a href="blog-post.htm" tabindex="-1" class="menu-item">Blog Post</a></li>
-                            </ul>
-                        </li>
+                        <li class="home-link"><a href="{{URL::to('/')}}"><i class="icon-home hidden-phone"></i><span class="visible-phone">Home</span></a></li>
+                        <li><a href="{{URL::to('/')}}" class="menu-item">Home</a></li>
+                         <li><a href="{{URL::to('/analyze')}}" class="menu-item">Analysis</a></li>
+                        <li><a href="{{URL::to('/help')}}" class="menu-item">Help</a></li>
+
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

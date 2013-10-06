@@ -232,8 +232,9 @@
                 .tooltips(true)
                 .showValues(true)
                 .transitionDuration(250)
-            ;
 
+            ;
+chart.yAxis.axisLabel("Poverty Level (%)");
         d3.select('#chart1 svg')
             .datum(historicalBarChart)
             .call(chart);
@@ -246,7 +247,7 @@
 
 
     var testdata = [
-      
+
     @foreach($dataArray1 as $dataItem)
     {
        key: "{{$dataItem['county']}}" ,
